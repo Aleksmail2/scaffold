@@ -7,14 +7,14 @@ import (
 	"path/filepath"
 
 	"github.com/catchplay/scaffold/scaffold"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
 func main() {
 	app := cli.NewApp()
 	app.Version = "1.0.0-rc"
 	app.Usage = "Generate scaffold project layout for Go."
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		{
 			Name:    "init",
 			Aliases: []string{"i"},
